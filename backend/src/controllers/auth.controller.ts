@@ -29,6 +29,7 @@ export class AuthController extends BaseHttpController {
       return this.json(EXCEPTIONS.Forbidden, 403)
     }
 
+    // FIX: return token in httpOnly cookies
     const payload = { sub: user.id }
     const token = jwt.sign(payload, process.env.JWT_SECRET)
     return this.json(token, 201)
