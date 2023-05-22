@@ -2,7 +2,7 @@ import { inject } from "inversify";
 import { BaseHttpController, controller, httpPost, request, requestBody } from "inversify-express-utils";
 import { EXCEPTIONS, TYPES } from "../constants";
 import { AuthService } from "../services";
-import { validateDTO } from "../validations";
+import { validateDTO } from "../middleware";
 import { UserDto } from "../validations/auth";
 import { Request } from "express";
 import * as jwt from "jsonwebtoken";

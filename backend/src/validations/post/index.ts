@@ -1,0 +1,1 @@
+export { GetAll } from './getAll.dto'
