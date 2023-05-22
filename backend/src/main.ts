@@ -3,6 +3,7 @@ import './controllers';
 import 'dotenv/config';
 import { InversifyExpressServer } from 'inversify-express-utils';
 import * as bodyParser from 'body-parser'
+import * as passport from 'passport'
 import { container } from './bindings';
 
 async function main() {
@@ -10,6 +11,7 @@ async function main() {
   const server = new InversifyExpressServer(container)
   server.setConfig((app) => {
     app.use(bodyParser.json())
+    app.use(passport.initialize())
   })
 
   server.build().listen(port)

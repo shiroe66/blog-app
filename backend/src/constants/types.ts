@@ -1,4 +1,5 @@
 export const TYPES = {
   AuthService: Symbol.for('AuthService'),
-  UserFactory: Symbol.for('UserFactory')
+  AuthMiddleware: Symbol.for('AuthMiddleware'),
+  UserFactory: Symbol.for('UserFactory'),
 }

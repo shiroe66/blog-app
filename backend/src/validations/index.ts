@@ -13,7 +13,7 @@ export const validateDTO = (dto: ClassConstructor<object>, type: 'body' | 'query
         constrains: error.constraints
       }))
 
-      res.status(400).json(changed)
+      return res.status(400).json(changed)
     }
 
     next()
